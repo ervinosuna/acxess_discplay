@@ -1,0 +1,105 @@
+:root {
+  --defaul-color: rgb(178, 34, 34);
+  --default-bg-color: rgb(233, 176, 176);
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0.5%;
+  padding: 0;
+  background-color: var(--default-bg-color);
+  color: var(--defaul-color);
+}
+div {
+  text-align: center;
+}
+.logotype {
+  width: 90%;
+  height: 90%;
+  padding-top: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+  padding-top: 0;
+  font-size: clamp(1rem, 1rem + 3vw, 3rem);
+}
+
+.construction {
+  display: inline-block;
+  position: relative;
+}
+
+.construction::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: solid rgb(245, 245, 245);
+  box-sizing: border-box;
+  animation: 1s infinite;
+}
+
+.construction::before {
+  animation-name: ping;
+  border-style: dashed;
+}
+
+@keyframes ping {
+  0% {
+    border-width: 0.7em;
+    opacity: 1;
+  }
+  100% {
+    border-width: 0;
+    opacity: 0;
+  }
+}
+#countdown {
+  color: rgb(131, 58, 180);
+}
+
+.fab {
+  padding: 3px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 0 10px 0 0;
+  border-radius: 50%;
+}
+
+.fab:hover {
+  opacity: 0.7;
+}
+
+.fa-whatsapp {
+  color: rgb(18, 140, 126);
+}
+
+.fa-instagram {
+  color: rgb(88, 81, 219);
+  /*   color: yellow;
+  background-color: linear-gradient(yellow 33%, blue 34% 67%, red 68%); */
+}
