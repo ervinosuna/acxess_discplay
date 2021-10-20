@@ -4,32 +4,206 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/style.css">
+
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"> -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"/>
+  
+  <!-- Bootstrap --> 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./css/acxess-style.css">
   <title>Contáctanos - Acxess Discplay</title>
 </head>
-
 <body>
-  <header class="header header-style">
-    <nav class="menu">
-      <ul>
+<!--   <header class="header header-style p-3">
+    <nav class="menu fw-normal">
+      <img src="/assets/img/logo.svg" alt="Logo Acxess Discplay">
+      <ul class="p-0 m-0">
         <li><a href="./index.html">Inicio</a></li>
         <li><a href="./about-us.html">Nosotros</a></li>
         <li><a href="./services.html">Servicios</a></li>
         <li><a href="./gallery.html">Galería</a></li>
       </ul>
     </nav>
+  </header> -->
+
+<!--     <header class="header header-style pt-1">
+      <nav class="menu">
+        <img class="image-logo" src="./assets/img/logo.svg" alt="Logo Acxess Discplay">
+        <ul class="p-0 m-0">
+          <li><a href="./index.html">Inicio</a></li>
+          <li><a href="./about-us.html">Nosotros</a></li>
+          <li><a href="./services.html">Servicios</a></li>
+          <li><a href="./gallery.html">Galería</a></li>
+        </ul>
+      </nav>
+    </header> -->
+
+  <header class="header header-style">
+    <img class="logo" src="./assets/img/logo.svg" alt="Logo Acxess Discplay">
+    <section class="modal-menu">
+      <nav class="menu">
+        <ul>
+          <li><a href="./index.html">Inicio</a></li>
+          <li><a href="./about-us.html">Nosotros</a></li>
+          <li><a href="./services.html">Servicios</a></li>
+          <li><a href="./gallery.html">Galería</a></li>
+        </ul>
+      </nav>
+    </section>
   </header>
   <main>
-    <h1>Contáctenos</h1>
+    <button class="hambur-btn hamburger hamburger--emphatic-r" type="button">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
+    <h2 class="look-contact center">Contáctenos</h2>
+    <div class="container d-flex justify-content-center"> 
+      <!-- Formulario de contacto -->
+      <form class="contact-form" action="https://formsubmit.co/ervin.osuna@gmail.com" method="POST" target="_blank">  
+        <legend class="text-center">Complete el siguiente formulario que en 24 horas te enviaremos un presupuesto personalizado,
+          sin ningún tipo de compromiso:</legend>
+          <!-- Datos básicos -->
+        <div class="row">
+          <div class="col-12">
+            <p class="text-center fw-bold">Datos básicos:</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-floating ps-1 pe-1 mb-2 col-md-6 position-relative">
+            <input type="text" class="form-control" id="firstName" name="firstName" minlength="2" maxlength="25" placeholder="Escriba su nombre" required>
+            <label for="firstName">Nombres:</label>
+            <div class="invalid-tooltip">
+              Introduzca sólo letras y espacios en blanco.
+            </div>
+          </div>
+          <div class="form-floating ps-1 pe-1 mb-2 col-md-6 position-relative">
+            <input type="text" class="form-control" id="lastName" name="lastName" minlength="2" maxlength="25"
+              placeholder="Escriba su apellido" required>
+            <label for="lastName">Apellidos:</label>
+            <div class="invalid-tooltip">
+              Introduzca sólo letras y espacios en blanco.
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-floating ps-1 pe-1 mb-2 col-md-3 position-relative">
+            <input type="tel" class="form-control" id="cellularPhone" name="cellularPhone" minlength="7" maxlength="17" placeholder="Escriba su número celular" required>
+            <label for="cellularPhone">Teléfono Celular:</label>
+            <div class="invalid-tooltip">
+              Formato: +584143112885 o 04143112885 o 0414-311-2885
+            </div>
+          </div>
+          <div class="form-floating ps-1 pe-1 mb-2 col-md-3">
+            <input type="text" class="form-control" id="phone" name="phone" placeholder="Escriba su teléfono fijo">
+            <label for="phone">Teléfono Fijo:</label>
+          </div>
+
+          <div class="form-floating ps-1 pe-1 mb-2 col-md-6 position-relative">
+            <input type="email" class="form-control" id="email" name="email" placeholder="Escriba su email" required>
+            <label for="email">Email:</label>
+            <div class="invalid-tooltip">
+              Introduzca formato de correo válido (cliente@acxess.com)
+            </div>
+          </div>
+        </div>
+        <!-- Datos del evento -->
+        <div class="row">
+          <div class="col-12">
+            <p class="text-center fw-bold">Datos del evento:</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-floating ps-1 pe-1 mb-2 col-md-3">
+            <input type="date" class="form-control" id="eventDate" name="eventDate" placeholder="Fecha Evento:" value="2021-10-22" min="2021-10-20" max="2024-12-31">
+            <label for="eventDate">Fecha evento:</label>
+          </div>
+          <div class="form-floating ps-1 pe-1 mb-2 col-md-2">
+            <input type="time" class="form-control" id="startTime" name="startTime" placeholder="Hora Inicio">
+            <label for="startTime">Hora inicio:</label>
+          </div>
+          <div class="form-floating ps-1 pe-1 mb-2 col-md-2">
+            <input type="time" class="form-control" id="endTime" name="endTime" placeholder="Hora Fin">
+            <label for="endTime">Hora fin:</label>
+          </div>
+          <div class="form-floating ps-1 pe-1 mb-2 col-md-5">
+            <select class="form-select" id="eventType" name="eventType">
+              <option value="1" selected>Evento Empresarial o Privado</option>
+              <option value="2">Cumpleaños</option>
+              <option value="3">Graduación</option>
+              <option value="4">Despedida de soltero</option>
+              <option value="5">Matrimonio</option>
+              <option value="6">Divorcios</option>
+              <option value="7">Graduación</option>
+              <option value="8">Karaoke</option>
+              <option value="9">Evento Público</option>
+              <option value="10">Fin de año - Carnavales</option>
+              <option value="11">Verbena</option>
+              <option value="12">Sonido para orquestas</option>
+              <option value="13">Sonido para mitin</option>
+              <option value="14">Otro</option>
+            </select>
+            <label for="eventType">Tipo de evento:</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-floating ps-1 pe-1 mb-2 col-md-12">
+            <input type="text" class="form-control" id="address" name="address" minlength="2" maxlength="100"
+              placeholder="Escriba la Dirección:">
+            <label for="address">Dirección Evento:</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-floating ps-1 pe-1 mb-2 col-md-4">
+            <input type="text" class="form-control" id="reference" name="reference" minlength="2" maxlength="30"
+              placeholder="Escriba una Referencia">
+            <label for="reference">Punto referencia:</label>
+          </div>
+          <div class="form-floating ps-1 pe-1 mb-2 col-md-4">
+            <input type="text" class="form-control" id="city" name="city" placeholder="Ciudad" minlength="2" maxlength="25">
+            <label for="city">Ciudad:</label>
+          </div>
+
+          <div class="form-floating ps-1 pe-1 mb-2 col-md-4">
+            <input type="text" class="form-control" id="state" name="state" placeholder="Estado" minlength="2" maxlength="25">
+            <label for="state">Estado:</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-floating ps-1 pe-1 mb-2">
+            <textarea class="form-control" cols="50" rows="5" placeholder="Escriba un comentario" id="comment" name="message" maxlength="255" style="height: 100px"></textarea>
+            <label for="comment">Comentarios:</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 center">
+            <input type="submit" value="Enviar">
+          </div>
+        </div>
+        <div class="row">
+          <div class="contact-form-status center none">
+            <img src="./assets/img/three-dots.svg" alt="Enviando">
+          </div>
+          <div class="contact-form-message none">
+            <p class="text-center fw-bold">Los datos han sido enviados</p>
+          </div>
+        </div>
+      </form>
+    </div>
   </main>
   <footer class="footer-style">
     <a class="fab fa-whatsapp" href="https://wa.me/584143112885/?text=Hola, Quiero un presupuesto" target="_blank"></a>
     <a class="fab fa-instagram" href="https://www.instagram.com/djacxess/" target="_blank"></a>
+    <div class="copyright">
+      © 2021 - Acxess Discplay C.A. - All Rights Reserved - Diseño y Desarrollo Ervin Osuna
+    </div>
   </footer>
+  <script src="js/form-contact.js" type="module"></script>
+  <script src="js/hamburger-menu.js" type="module"></script>
 </body>
-
 </html>

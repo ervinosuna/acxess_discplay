@@ -4,11 +4,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
   integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
   crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- <link rel="stylesheet" href="./css/style.css"> -->
+  <link rel="stylesheet" href="./css/acxess-style.css">
   <title>Miniteca Acxess Discplay</title>
 </head>
 <body>
@@ -16,9 +17,10 @@
     <img class="animate__animated animate__bounce logotype" src="./assets/img/logo.svg" alt="imagen acxess display">
     <h1 class="animate__animated animate__bounceInLeft">Sonido e iluminación profesional</h1>
   </div>
-  
-  <header class="header header-style">
+
+<!--   <header class="header header-style">
     <nav class="menu">
+      <img class="none" src="./assets/img/logo.svg" alt="Logo Acxess Discplay">
       <ul>
         <li><a href="./about-us.html">Nosotros</a></li>
         <li><a href="./services.html">Servicios</a></li>
@@ -26,16 +28,32 @@
         <li><a href="./contact-us.html">Contáctanos</a></li>
       </ul>
     </nav>
+  </header> -->
+  <header class="header header-style">
+    <img class="logo none" src="./assets/img/logo.svg" alt="Logo Acxess Discplay">
+    <section class="modal-menu">
+      <nav class="menu">
+        <ul>
+          <li><a href="./index.html">Inicio</a></li>
+          <li><a href="./about-us.html">Nosotros</a></li>
+          <li><a href="./gallery.html">Galería</a></li>
+          <li><a href="./contact-us.html">Contáctanos</a></li>
+        </ul>
+      </nav>
+    </section>
   </header>
   <main>
-    <br>
-    <br>
+    <button class="hambur-btn hamburger hamburger--emphatic-r" type="button">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
     <section class="flex-container">
       <article class="flex-item">
         <h4 class="look-main">La fiesta perfecta es... ¡con nosotros!</h4>
       </article>
       <article class="flex-item">
-        <img class="photo" src="./assets/img/foto_2.jpg" alt="show de luces">
+        <img class="photo" src="./assets/img/foto_2.jpg" alt="Show de luces">
       </article>
     </section>
     <section class="flex-container flex-row-reverse">
@@ -43,15 +61,17 @@
         <h4 class="look-main">Entra al mundo del sonido y el color con el Discplay que se especializa en la animación de celebraciones privadas.</h4>
       </article>
       <article class="flex-item">
-        <img class="photo" src="./assets/img/foto_1.jpg" alt="gente bailando">
+        <img class="photo" src="./assets/img/foto_1.jpg" alt="Gente bailando">
       </article>
     </section>
-    <br>
   </main>
-  <hr>
   <footer class="footer-style">
     <a class="fab fa-whatsapp" href="https://wa.me/584143112885/?text=Hola, Quiero un presupuesto" target="_blank"></a>
     <a class="fab fa-instagram" href="https://www.instagram.com/djacxess/" target="_blank"></a>
+    <div class="copyright">
+      © 2021 - Acxess Discplay C.A. - All Rights Reserved - Diseño y Desarrollo Ervin Osuna
+    </div>
    </footer>
+  <script src="js/hamburger-menu.js" type="module"></script>
 </body>
 </html>

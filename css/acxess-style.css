@@ -1,0 +1,439 @@
+/**********  VARIABLES  **********/
+:root {
+  --default-color: rgb(178, 34, 34);
+  --default-bg-color: rgb(233, 176, 176);
+  --form-placeholder-color: rgb(178, 34, 34);
+  --header-bg-color: #d93d59; /* #f26b6b;  #8c3746; */
+  --header-font-color: #f2f2e9;
+  --header-hover-color: #d9cc14;
+  --hamburger-color: #dd9d27;
+  --modal-bg-color: rgba(34, 34, 34, 0.65);
+  --modal-menu-color: rgba(156, 60, 77, 0.75);
+
+  --footer-bg-color: #f26b6b; /* primero */
+  --footer-bg-color: #c76e7f;
+  --bs-font-sans-serif: Verdana, Geneva, Tahoma, sans-serif;
+  --bs-body-font-size: 1rem;
+  --bs-body-font-weight: normal;
+  --bs-body-line-height: normal;
+}
+/**********  RESET - CSS  **********/
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0; /*  */
+  box-sizing: border-box;
+}
+
+body {
+  font-size: var(--bs-body-font-size);
+  font-family: var(--bs-font-sans-serif);
+  background-color: var(--default-bg-color);
+  color: var(--default-color);
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+main {
+  flex-grow: 1;
+}
+
+/********************************  GENERAL STYLE  ********************************/
+/**********  Logo  **********/
+/* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$   revisar en responsivo    ****/
+.main-logo {
+  text-align: center;
+  padding-bottom: 15px;
+}
+.logotype {
+  width: 90%;
+  height: 90%;
+  padding-top: 2rem;
+}
+
+/**********  Navigation menu  **********/
+/* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$   revisar en responsivo    ****/
+.header {
+  background-color: var(--header-bg-color);
+  padding: 0.25rem 0;
+  margin-bottom: 0.25rem;
+  height: 4.5rem;
+
+  text-align: center;
+  /*   height: 6.5rem; */
+  /*   border: thin solid #222; */
+
+  position: sticky;
+  z-index: 998;
+  top: 0;
+}
+
+.logo {
+  max-width: 15%;
+  height: 100%;
+  margin: 0 0.5rem;
+
+  border: thin solid #222;
+}
+
+/*
+.menu {
+  display: flex;
+  flex-flow: row wrap;
+  height: 4.5rem;
+}
+
+.header a {
+  margin: 0 1rem;
+  color: var(--header-font-color);
+  text-decoration: none;
+  transition: color 0.5s ease;
+}
+
+.header a:hover {
+  color: var(--header-hover-color);
+}
+
+.menu ul {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  list-style-type: none;
+}
+
+.menu li {
+  padding: 0.5rem;
+} */
+
+/**********  Footer  **********/
+.footer-style {
+  margin-top: 2rem;
+  /*   padding: 1rem;*/
+  text-align: center;
+  height: 5rem;
+  background-color: var(--footer-bg-color);
+  /*  border: thin solid #222; */
+}
+/* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$   revisar en responsivo    ****/
+.copyright {
+  font-size: xx-small;
+  padding: 0.75rem 0;
+  /*   border: thin solid #222; */
+}
+
+/**********  Social Networks  **********/
+.fab {
+  /* padding: 3px; */
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 10px 10px 0 0;
+  border-radius: 50%;
+  /*   border: thin solid #222; */
+}
+.fab:hover {
+  opacity: 0.7;
+}
+
+.fa-whatsapp {
+  color: rgb(18, 140, 126);
+}
+.fa-instagram {
+  /*  background-image: linear-gradient(#ffdc80, #fd1d1d, #833ab4, #405de6); */
+  background-image: linear-gradient(#405de6, #833ab4, #fd1d1d, #ffdc80);
+  /* 70deg, */
+  background-clip: text;
+  -ms-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  -ms-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+  /*  color: rgb(88, 81, 219); */
+}
+
+/********************************  CONTENT  ********************************/
+
+/**********  Responsive **********/
+
+/* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$   FALTA    ****/
+
+@media screen and (min-width: 992px) {
+  .header {
+    height: 5rem;
+    /*   border: thin solid #222; */
+  }
+  .flex-container {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+  }
+  .flex-item {
+    flex: 0 0 50%;
+    padding-left: 0.5vw;
+    text-align: center;
+    justify-content: center;
+    border: thin solid #222;
+  }
+  .flex-row-reverse {
+    flex-direction: row-reverse;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header {
+    height: 5.5rem;
+    /*   border: thin solid #222; */
+  }
+}
+
+/**********  ABOUT US  **********/
+
+/**********  Imagen  **********/
+.photo {
+  max-width: 95%;
+  height: auto;
+  margin: 0 1em;
+  border-radius: 2rem;
+}
+/**********  Texts  **********/
+.look-main {
+  /* line-height: 1.2; */
+  margin: 1em;
+}
+p {
+  margin: 1em;
+  text-align: justify;
+}
+.center {
+  text-align: center;
+}
+
+/**********  CONTACT US  **********/
+legend {
+  font-size: var(--bs-body-font-size);
+}
+
+.look-contact {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.none {
+  /* display: none; */
+  visibility: hidden;
+}
+.contact-form-status {
+  padding-top: 1rem;
+}
+
+/**********  Contact Form  **********/
+.contact-form > * {
+  caret-color: var(--form-placeholder-color);
+}
+.contact-form textarea {
+  /* height: 100px !important; */
+  resize: none;
+}
+.contact-form input[type="submit"] {
+  /*   margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto; */
+  width: 20%;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #fff;
+  background-color: var(--default-color);
+}
+.contact-form input[type="submit"]:hover {
+  /*   cursor: pointer; */
+  opacity: 0.75;
+}
+
+/****** Hamburgers @author Jonathan Suh @jonsuh * @site https://jonsuh.com/hamburgers  ******/
+.hamburger {
+  padding: 15px 15px;
+  display: inline-block;
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible;
+}
+.hamburger:hover {
+  opacity: 0.7;
+}
+.hamburger.is-active:hover {
+  opacity: 0.7;
+}
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+  background-color: #000;
+}
+
+.hamburger-box {
+  width: 40px;
+  height: 24px;
+  display: inline-block;
+  position: relative;
+}
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px;
+}
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+  width: 40px;
+  height: 4px;
+  background-color: #000;
+  border-radius: 4px;
+  position: absolute;
+  transition-property: transform;
+  transition-duration: 0.15s;
+  transition-timing-function: ease;
+}
+.hamburger-inner::before,
+.hamburger-inner::after {
+  content: "";
+  display: block;
+}
+.hamburger-inner::before {
+  top: -10px;
+}
+.hamburger-inner::after {
+  bottom: -10px;
+}
+
+/*******  Emphatic Reverse  ********/
+.hamburger--emphatic-r {
+  overflow: hidden;
+}
+.hamburger--emphatic-r .hamburger-inner {
+  transition: background-color 0.125s 0.175s ease-in;
+}
+.hamburger--emphatic-r .hamburger-inner::before {
+  left: 0;
+  transition: transform 0.125s cubic-bezier(0.6, 0.04, 0.98, 0.335),
+    top 0.05s 0.125s linear, left 0.125s 0.175s ease-in;
+}
+.hamburger--emphatic-r .hamburger-inner::after {
+  top: 10px;
+  right: 0;
+  transition: transform 0.125s cubic-bezier(0.6, 0.04, 0.98, 0.335),
+    top 0.05s 0.125s linear, right 0.125s 0.175s ease-in;
+}
+.hamburger--emphatic-r.is-active .hamburger-inner {
+  transition-delay: 0s;
+  transition-timing-function: ease-out;
+  background-color: transparent !important;
+}
+.hamburger--emphatic-r.is-active .hamburger-inner::before {
+  left: -80px;
+  top: 80px;
+  transform: translate3d(80px, -80px, 0) rotate(-45deg);
+  transition: left 0.125s ease-out, top 0.05s 0.125s linear,
+    transform 0.125s 0.175s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.hamburger--emphatic-r.is-active .hamburger-inner::after {
+  right: -80px;
+  top: 80px;
+  transform: translate3d(-80px, -80px, 0) rotate(45deg);
+  transition: right 0.125s ease-out, top 0.05s 0.125s linear,
+    transform 0.125s 0.175s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.hambur-btn {
+  position: fixed;
+  z-index: 1000;
+  bottom: 1vh;
+  right: 1vw;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--hamburger-color);
+}
+
+.modal-menu {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  /* overflow-y: auto;*/
+  background-color: var(--modal-bg-color);
+
+  /* con opacity */
+  /*  opacity: 0;
+  visibility: hidden;*/
+  transition: transform 0.3s ease, opacity 0.5s ease;
+
+  transform: translate(-100%, 0%);
+}
+
+.modal-menu.is-active {
+  transform: translate(0, 0);
+}
+.menu {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /*  border: thin solid #fff; */
+}
+
+/* .header a {
+  margin: 0 1rem;
+  color: var(--header-font-color);
+  text-decoration: none;
+  transition: color 0.5s ease;
+} */
+
+.menu a {
+  padding: 2rem;
+  width: 100vw; /* inherit;*/
+  display: block;
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: var(--header-font-color);
+
+  /* transition: all 0.3s ease; */
+
+  transition: background-color 0.3s ease, color 0.3s ease, font-weight 0.3s ease;
+  /* border: thin solid #fff; */
+}
+
+.menu ul {
+  /*   display: flex;
+  flex-flow: row wrap;
+  align-items: center; */
+  list-style-type: none;
+}
+
+.menu a:hover {
+  font-weight: bold;
+  /*  color: var(--second-color); */
+  color: var(--header-hover-color);
+  background-color: var(--modal-menu-color);
+}
