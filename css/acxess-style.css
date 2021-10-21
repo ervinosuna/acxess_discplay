@@ -53,59 +53,29 @@ main {
   padding-top: 2rem;
 }
 
+.title {
+  font-size: 1rem;
+}
+
 /**********  Navigation menu  **********/
 /* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$   revisar en responsivo    ****/
 .header {
   background-color: var(--header-bg-color);
   padding: 0.25rem 0;
+  width: 100%;
   margin-bottom: 0.25rem;
   height: 4.5rem;
-
   text-align: center;
-  /*   height: 6.5rem; */
-  /*   border: thin solid #222; */
-
   position: sticky;
   z-index: 998;
   top: 0;
 }
 
 .logo {
-  max-width: 15%;
+  max-width: 100%; /* 25% */
   height: 100%;
   margin: 0 0.5rem;
-
-  border: thin solid #222;
 }
-
-/*
-.menu {
-  display: flex;
-  flex-flow: row wrap;
-  height: 4.5rem;
-}
-
-.header a {
-  margin: 0 1rem;
-  color: var(--header-font-color);
-  text-decoration: none;
-  transition: color 0.5s ease;
-}
-
-.header a:hover {
-  color: var(--header-hover-color);
-}
-
-.menu ul {
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-  list-style-type: none;
-}
-
-.menu li {
-  padding: 0.5rem;
-} */
 
 /**********  Footer  **********/
 .footer-style {
@@ -116,11 +86,18 @@ main {
   background-color: var(--footer-bg-color);
   /*  border: thin solid #222; */
 }
-/* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$   revisar en responsivo    ****/
 .copyright {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 0.5rem;
   font-size: xx-small;
-  padding: 0.75rem 0;
-  /*   border: thin solid #222; */
+  justify-content: center;
+}
+.copyright-item {
+  margin-right: 0.25rem;
+  text-align: center;
 }
 
 /**********  Social Networks  **********/
@@ -156,47 +133,28 @@ main {
 }
 
 /********************************  CONTENT  ********************************/
-
-/**********  Responsive **********/
-
-/* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$   FALTA    ****/
-
-@media screen and (min-width: 992px) {
-  .header {
-    height: 5rem;
-    /*   border: thin solid #222; */
-  }
-  .flex-container {
-    display: flex;
-    align-items: center;
-    margin-top: 2rem;
-  }
-  .flex-item {
-    flex: 0 0 50%;
-    padding-left: 0.5vw;
-    text-align: center;
-    justify-content: center;
-    border: thin solid #222;
-  }
-  .flex-row-reverse {
-    flex-direction: row-reverse;
-  }
+/*****************  ABOUT US  *****************/
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 0.5rem;
+  /* border: thin solid #greenyellow; */
+}
+.flex-item {
+  flex: 0 0 auto;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  /* border: thin solid greenyellow; */
 }
 
-@media (min-width: 1200px) {
-  .header {
-    height: 5.5rem;
-    /*   border: thin solid #222; */
-  }
-}
-
-/**********  ABOUT US  **********/
-
-/**********  Imagen  **********/
+/**********  Image  **********/
 .photo {
-  max-width: 95%;
+  max-width: 80%;
   height: auto;
-  margin: 0 1em;
+  margin: 0 1rem;
   border-radius: 2rem;
 }
 /**********  Texts  **********/
@@ -204,15 +162,16 @@ main {
   /* line-height: 1.2; */
   margin: 1em;
 }
-p {
+article p {
   margin: 1em;
   text-align: justify;
 }
+
 .center {
   text-align: center;
 }
 
-/**********  CONTACT US  **********/
+/*****************  CONTACT US  *****************/
 legend {
   font-size: var(--bs-body-font-size);
 }
@@ -235,25 +194,24 @@ legend {
   caret-color: var(--form-placeholder-color);
 }
 .contact-form textarea {
-  /* height: 100px !important; */
   resize: none;
 }
 .contact-form input[type="submit"] {
-  /*   margin-bottom: 0;
-  margin-left: auto;
-  margin-right: auto; */
-  width: 20%;
+  width: 40%;
   font-weight: bold;
   font-size: 1rem;
   color: #fff;
   background-color: var(--default-color);
+  /*  border: thin solid mediumseagreen; */
 }
 .contact-form input[type="submit"]:hover {
   /*   cursor: pointer; */
   opacity: 0.75;
 }
 
-/****** Hamburgers @author Jonathan Suh @jonsuh * @site https://jonsuh.com/hamburgers  ******/
+/**********  Hamburgers design at Jonathan Suh  **********/
+/***  @site https://jonsuh.com/hamburgers  ***/
+
 .hamburger {
   padding: 15px 15px;
   display: inline-block;
@@ -317,7 +275,7 @@ legend {
   bottom: -10px;
 }
 
-/*******  Emphatic Reverse  ********/
+/**********  Emphatic Reverse  **********/
 .hamburger--emphatic-r {
   overflow: hidden;
 }
@@ -355,11 +313,13 @@ legend {
     transform 0.125s 0.175s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
+/**********  Hamburger Button  **********/
+
 .hambur-btn {
   position: fixed;
   z-index: 1000;
-  bottom: 1vh;
-  right: 1vw;
+  bottom: 3vh;
+  right: 2vw;
   width: 4rem;
   height: 4rem;
   border-radius: 50%;
@@ -380,12 +340,10 @@ legend {
   width: 100%;
   /* overflow-y: auto;*/
   background-color: var(--modal-bg-color);
-
   /* con opacity */
   /*  opacity: 0;
   visibility: hidden;*/
   transition: transform 0.3s ease, opacity 0.5s ease;
-
   transform: translate(-100%, 0%);
 }
 
@@ -412,14 +370,13 @@ legend {
 
 .menu a {
   padding: 2rem;
-  width: 100vw; /* inherit;*/
+  /* width: 100vw;  */ /* inherit;*/
+  width: 100%;
   display: block;
   text-decoration: none;
   font-size: 1.5rem;
   color: var(--header-font-color);
-
   /* transition: all 0.3s ease; */
-
   transition: background-color 0.3s ease, color 0.3s ease, font-weight 0.3s ease;
   /* border: thin solid #fff; */
 }
@@ -433,7 +390,123 @@ legend {
 
 .menu a:hover {
   font-weight: bold;
-  /*  color: var(--second-color); */
   color: var(--header-hover-color);
   background-color: var(--modal-menu-color);
 }
+
+/********************************  RESPONSIVE  ********************************/
+@media screen and (min-width: 576px) {
+  .title {
+    font-size: 1.5rem;
+  }
+}
+
+/**********  > 992px  **********/
+@media screen and (min-width: 992px) {
+  .title {
+    font-size: 2rem;
+  }
+  .hambur-btn {
+    visibility: hidden;
+  }
+  /**/
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .modal-menu {
+    position: sticky;
+
+    /* position: sticky; */
+    /* static relative absolute sticky fixed */
+    /* overflow-y: auto;*/
+    /* width: 100%; */
+    background-color: var(--header-bg-color);
+    /* con opacity */
+    /*  opacity: 0;
+  visibility: hidden;*/
+    /* transition: transform 0.3s ease, opacity 0.5s ease;*/
+    transform: none;
+    /* border: thin solid blue; */
+  }
+  .menu {
+    display: flex;
+    flex-flow: row;
+    height: 4rem;
+
+    /* height: 100%; */
+    /*  width: 100%; */
+    justify-content: flex-start;
+    /* align-items: center; */
+    /* text-align: center;  */
+    /* border: thin solid greenyellow; */
+  }
+  .menu ul {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    /*   list-style-type: none; */
+  }
+
+  /*  .menu li {
+  
+
+    font-size: 1rem;
+  } */
+
+  .menu a {
+    padding: 1.5rem;
+    font-size: 1rem;
+    /* width: 100vw;  */ /* inherit;*/
+    /* width: 100%; */
+    display: block;
+    text-decoration: none;
+    color: var(--header-font-color);
+    border-radius: 0.5rem;
+    /* transition: all 0.3s ease; */
+    transition: background-color 0.3s ease, color 0.3s ease,
+      font-weight 0.3s ease;
+    /* border: thin solid #fff; */
+  }
+
+  /****/
+  .flex-container {
+    flex-direction: row;
+    margin-top: 2rem;
+  }
+  .flex-item {
+    flex: 0 0 50%;
+    /* border: thin solid blue; */
+  }
+  .flex-row-reverse {
+    flex-direction: row-reverse;
+  }
+
+  .contact-form input[type="submit"] {
+    width: 20%;
+    /* border: thin solid blue; */
+  }
+}
+
+/* @media (min-width: 1200px) {
+  .header {
+    height: 5.5rem;
+
+  }
+  .title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .header {
+    height: 5.5rem;
+
+  }
+  .title {
+    font-size: 3rem;
+  }
+}
+ */
