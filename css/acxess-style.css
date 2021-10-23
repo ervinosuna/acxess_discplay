@@ -2,7 +2,7 @@
 :root {
   --default-color: rgb(178, 34, 34);
   --default-bg-color: rgb(233, 176, 176);
-  --form-placeholder-color: rgb(178, 34, 34);
+  --form-placeholder-color: #b22222;
   --header-bg-color: #d93d59; /* #f26b6b;  #8c3746; */
   --header-font-color: #f2f2e9;
   --header-hover-color: #d9cc14;
@@ -29,12 +29,11 @@
 body {
   font-size: var(--bs-body-font-size);
   font-family: var(--bs-font-sans-serif);
-  background-color: var(--default-bg-color);
   color: var(--default-color);
-
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-color: var(--default-bg-color);
 }
 main {
   flex-grow: 1;
@@ -46,6 +45,18 @@ main {
 .main-logo {
   text-align: center;
   padding-bottom: 15px;
+  background: var(--default-bg-color); /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    #e74c3c,
+    #000000
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #000000,
+    #e74c3c,
+    #000000
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 .logotype {
   width: 90%;
@@ -60,7 +71,6 @@ main {
 /**********  Navigation menu  **********/
 /* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$   revisar en responsivo    ****/
 .header {
-  background-color: var(--header-bg-color);
   padding: 0.25rem 0;
   width: 100%;
   margin-bottom: 0.25rem;
@@ -69,6 +79,8 @@ main {
   position: sticky;
   z-index: 998;
   top: 0;
+  background-color: var(--header-bg-color);
+  background: linear-gradient(to top, #e74c3c, #000000);
 }
 
 .logo {
@@ -84,6 +96,19 @@ main {
   text-align: center;
   height: 5rem;
   background-color: var(--footer-bg-color);
+
+  background: var(--default-bg-color); /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    #e74c3c,
+    #000000
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #e74c3c,
+    #000000
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   /*  border: thin solid #222; */
 }
 .copyright {
@@ -133,6 +158,9 @@ main {
 }
 
 /********************************  CONTENT  ********************************/
+
+/*****************  INDEX  *****************/
+
 /*****************  ABOUT US  *****************/
 .flex-container {
   display: flex;
@@ -361,7 +389,7 @@ legend {
   /*  border: thin solid #fff; */
 }
 
-/* .header a {
+/* .header a {  no
   margin: 0 1rem;
   color: var(--header-font-color);
   text-decoration: none;
@@ -370,21 +398,16 @@ legend {
 
 .menu a {
   padding: 2rem;
-  /* width: 100vw;  */ /* inherit;*/
   width: 100%;
   display: block;
   text-decoration: none;
   font-size: 1.5rem;
   color: var(--header-font-color);
-  /* transition: all 0.3s ease; */
   transition: background-color 0.3s ease, color 0.3s ease, font-weight 0.3s ease;
-  /* border: thin solid #fff; */
 }
 
 .menu ul {
-  /*   display: flex;
-  flex-flow: row wrap;
-  align-items: center; */
+  padding: 0;
   list-style-type: none;
 }
 
@@ -418,57 +441,34 @@ legend {
 
   .modal-menu {
     position: sticky;
-
-    /* position: sticky; */
-    /* static relative absolute sticky fixed */
-    /* overflow-y: auto;*/
-    /* width: 100%; */
-    background-color: var(--header-bg-color);
-    /* con opacity */
-    /*  opacity: 0;
-  visibility: hidden;*/
-    /* transition: transform 0.3s ease, opacity 0.5s ease;*/
+    background-color: transparent;
     transform: none;
-    /* border: thin solid blue; */
   }
   .menu {
     display: flex;
     flex-flow: row;
     height: 4rem;
-
-    /* height: 100%; */
-    /*  width: 100%; */
     justify-content: flex-start;
-    /* align-items: center; */
-    /* text-align: center;  */
-    /* border: thin solid greenyellow; */
+    align-items: center;
   }
   .menu ul {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
-    /*   list-style-type: none; */
   }
 
-  /*  .menu li {
-  
-
-    font-size: 1rem;
-  } */
-
   .menu a {
-    padding: 1.5rem;
+    padding: 1rem 1.5rem;
     font-size: 1rem;
-    /* width: 100vw;  */ /* inherit;*/
-    /* width: 100%; */
     display: block;
-    text-decoration: none;
-    color: var(--header-font-color);
-    border-radius: 0.5rem;
-    /* transition: all 0.3s ease; */
+    /*    border-radius: 0.5rem; */
     transition: background-color 0.3s ease, color 0.3s ease,
       font-weight 0.3s ease;
     /* border: thin solid #fff; */
+  }
+
+  .menu a:hover {
+    background-color: transparent;
   }
 
   /****/

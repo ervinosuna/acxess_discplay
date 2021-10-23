@@ -1,5 +1,5 @@
 :root {
-  --defaul-color: rgb(178, 34, 34);
+  --defaul-color: #b22222;
   --default-bg-color: rgb(233, 176, 176);
 }
 
@@ -21,7 +21,20 @@ body {
   height: 100%;
   margin: 0.5%;
   padding: 0;
-  background-color: var(--default-bg-color);
+  /* background-color: var(--default-bg-color); */
+
+  background: var(--default-bg-color); /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    #e74c3c,
+    #000000
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #e74c3c,
+    #000000
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   color: var(--defaul-color);
 }
 div {
