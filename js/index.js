@@ -1,19 +1,25 @@
 const d = document;
-import countdown from "./countdown.js";
+const bigLogo = d.getElementById("bigLogo");
+const smallLogo = d.getElementById("smallLogo");
 
-d.addEventListener("DOMContentLoaded", (f) => {
-  countdown("countdown", "10/25/2021");
+const loadLogo = (entry, observation) => {
+  if (!entry[0].isIntersecting) {
+    smallLogo.classList.remove("invisible-logo");
+    smallLogo.classList.add("visible-logo");
+    /*     bigLogo.classList.add("invisible-logo");
+    bigLogo.classList.remove("visible-logo"); */
+  } else {
+    smallLogo.classList.add("invisible-logo");
+    smallLogo.classList.remove("visible-logo");
+    /*     bigLogo.classList.remove("invisible-logo");
+    bigLogo.classList.add("visible-logo"); */
+  }
+};
+
+const observator = new IntersectionObserver(loadLogo, {
+  root: null,
+  rootMargin: "0px",
+  threshold: 0.25,
 });
 
-/* import formValidation from "./form-contact.js";
-import hamburger from "./hamburger-menu.js";
-*/
-
-/* formValidation();
-hamburger(".hambur-btn", ".modal-menu"); */
-
-/* var baseElement = document.querySelector("nav");
-console.log(baseElement);
-document.getElementById("output").innerHTML =
-  baseElement.querySelector("ul li").innerHTML;
-console.log(baseElement); */
+observator.observe(bigLogo);

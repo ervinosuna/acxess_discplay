@@ -4,20 +4,19 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"> -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
   integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
   crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="./css/acxess-style.css">
   <title>Miniteca Acxess Discplay</title>
 </head>
-<body>
+<body>  <!-- __animated animate__bounce -->
   <div class="main-logo">
-    <img class="animate__animated animate__bounce logotype" src="./assets/img/logo.svg" alt="imagen acxess display">
-    <h1 class="title animate__animated animate__bounceInLeft">Sonido e iluminación profesional</h1>
+    <img id="bigLogo" class="animate-1 logotype visible-logo" src="./assets/img/logo.svg" alt="Imagen Acxess Discplay">
+    <h1 class="title animate-2">Sonido e iluminación profesional</h1>
   </div>
   <header class="header">
-    <img class="logo" src="./assets/img/logo.svg" alt="Logo Acxess Discplay">
+    <img id="smallLogo" class="logo invisible-logo" src="./assets/img/logo.svg" alt="Logo Acxess Discplay">
     <section class="modal-menu">
       <nav class="menu">
         <ul>
@@ -69,5 +68,6 @@
     </div>
   </footer>
   <script src="js/hamburger-menu.js" type="module"></script>
+  <script src="js/index.js" type="module"></script>
 </body>
 </html>

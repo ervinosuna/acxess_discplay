@@ -1,18 +1,17 @@
-/**********  version 3  **********/
+/**********  version 4  **********/
 /**********  VARIABLES  **********/
 :root {
   --default-color: rgb(178, 34, 34);
   --default-bg-color: rgb(233, 176, 176);
-  --form-placeholder-color: #b22222;
-  --header-bg-color: #d93d59; /* #f26b6b;  #8c3746; */
-  --header-font-color: #f2f2e9;
-  --header-hover-color: #d9cc14;
-  --hamburger-color: #dd9d27;
+  --form-placeholder-color: rgb(180, 34, 34);
+
+  --header-font-color: rgb(242, 242, 233);
+  --header-hover-color: rgb(217, 204, 20);
+
+  --hamburger-color: rgba(219, 194, 52, 0.575);
   --modal-bg-color: rgba(34, 34, 34, 0.65);
   --modal-menu-color: rgba(156, 60, 77, 0.75);
 
-  --footer-bg-color: #f26b6b; /* primero */
-  --footer-bg-color: #c76e7f;
   --bs-font-sans-serif: Verdana, Geneva, Tahoma, sans-serif;
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: normal;
@@ -42,23 +41,12 @@ main {
 
 /********************************  GENERAL STYLE  ********************************/
 /**********  Logo  **********/
-/* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$   revisar en responsivo    ****/
 .main-logo {
   text-align: center;
   padding-bottom: 15px;
-  background: var(--default-bg-color); /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to top,
-    #000000,
-    #e74c3c,
-    #000000
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to top,
-    #000000,
-    #e74c3c,
-    #000000
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: var(--default-bg-color); /* fallback old browsers */
+  background: -webkit-linear-gradient(to top, #000000, #e74c3c, #000000);
+  background: linear-gradient(to top, #000000, #e74c3c, #000000);
 }
 .logotype {
   width: 90%;
@@ -71,7 +59,6 @@ main {
 }
 
 /**********  Navigation menu  **********/
-/* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$   revisar en responsivo    ****/
 .header {
   padding: 0.25rem 0;
   width: 100%;
@@ -81,7 +68,6 @@ main {
   position: sticky;
   z-index: 998;
   top: 0;
-  /*   background-color: var(--header-bg-color); */
   background: linear-gradient(to top, #e74c3c, #000000);
 }
 
@@ -94,24 +80,11 @@ main {
 /**********  Footer  **********/
 .footer-style {
   margin-top: 2rem;
-  /*   padding: 1rem;*/
   text-align: center;
   height: 5rem;
-  background-color: var(--footer-bg-color);
-
-  background: var(--default-bg-color); /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to top,
-    #e74c3c,
-    #000000
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to bottom,
-    #e74c3c,
-    #000000
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-  /*  border: thin solid #222; */
+  background: var(--default-bg-color);
+  background: -webkit-linear-gradient(to top, #e74c3c, #000000);
+  background: linear-gradient(to bottom, #e74c3c, #000000);
 }
 .copyright {
   display: flex;
@@ -120,6 +93,7 @@ main {
   align-items: center;
   margin-top: 0.5rem;
   font-size: xx-small;
+  color: var(--header-font-color);
   justify-content: center;
 }
 .copyright-item {
@@ -129,14 +103,12 @@ main {
 
 /**********  Social Networks  **********/
 .fab {
-  /* padding: 3px; */
   font-size: 30px;
   width: 30px;
   text-align: center;
   text-decoration: none;
   margin: 10px 10px 0 0;
   border-radius: 50%;
-  /*   border: thin solid #222; */
 }
 .fab:hover {
   opacity: 0.7;
@@ -146,9 +118,7 @@ main {
   color: rgb(18, 140, 126);
 }
 .fa-instagram {
-  /*  background-image: linear-gradient(#ffdc80, #fd1d1d, #833ab4, #405de6); */
   background-image: linear-gradient(#405de6, #833ab4, #fd1d1d, #ffdc80);
-  /* 70deg, */
   background-clip: text;
   -ms-background-clip: text;
   -moz-background-clip: text;
@@ -156,12 +126,23 @@ main {
   -ms-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
   -webkit-text-fill-color: transparent;
-  /*  color: rgb(88, 81, 219); */
 }
 
 /********************************  CONTENT  ********************************/
-
 /*****************  INDEX  *****************/
+
+.invisible-logo {
+  opacity: 0;
+  transform: scale(0);
+  transition: transform 1s ease-in-out, opacity 2s ease;
+}
+.visible-logo {
+  opacity: 1;
+  transform: scale(1);
+  transition: transform 1s ease-in-out, opacity 2s ease;
+}
+
+/*****************  PICTURE GALLERY  *****************/
 
 /*****************  ABOUT US  *****************/
 .flex-container {
@@ -189,7 +170,6 @@ main {
 }
 /**********  Texts  **********/
 .look-main {
-  /* line-height: 1.2; */
   margin: 1em;
 }
 article p {
@@ -212,7 +192,6 @@ legend {
 }
 
 .none {
-  /* display: none; */
   visibility: hidden;
 }
 .contact-form-status {
@@ -232,10 +211,8 @@ legend {
   font-size: 1rem;
   color: #fff;
   background-color: var(--default-color);
-  /*  border: thin solid mediumseagreen; */
 }
 .contact-form input[type="submit"]:hover {
-  /*   cursor: pointer; */
   opacity: 0.75;
 }
 
@@ -368,11 +345,7 @@ legend {
   left: 0;
   right: 0;
   width: 100%;
-  /* overflow-y: auto;*/
   background-color: var(--modal-bg-color);
-  /* con opacity */
-  /*  opacity: 0;
-  visibility: hidden;*/
   transition: transform 0.3s ease, opacity 0.5s ease;
   transform: translate(-100%, 0%);
 }
@@ -388,16 +361,7 @@ legend {
   justify-content: center;
   align-items: center;
   text-align: center;
-  /*  border: thin solid #fff; */
 }
-
-/* .header a {  no
-  margin: 0 1rem;
-  color: var(--header-font-color);
-  text-decoration: none;
-  transition: color 0.5s ease;
-} */
-
 .menu a {
   padding: 2rem;
   width: 100%;
@@ -407,12 +371,10 @@ legend {
   color: var(--header-font-color);
   transition: background-color 0.3s ease, color 0.3s ease, font-weight 0.3s ease;
 }
-
 .menu ul {
   padding: 0;
   list-style-type: none;
 }
-
 .menu a:hover {
   font-weight: bold;
   color: var(--header-hover-color);
@@ -422,16 +384,17 @@ legend {
 /***************  Slider  ******************/
 .slides-container {
   position: relative;
-  border: thin solid black;
   width: 50%;
   margin: 1rem auto;
   text-align: center;
+  background: radial-gradient(#e74c3c, #000000);
 }
 
 .slider {
   position: relative;
-  height: 500px;
-  border: thin solid blue;
+  height: 500px; /*Original - esta bien*/
+  /* height: 80vh; */
+  border: thick solid var(--header-font-color);
 }
 
 .slides {
@@ -463,36 +426,97 @@ legend {
   position: absolute;
   top: 50%;
   width: auto;
-
   margin-top: -22px;
   padding: 16px;
-
   color: var(--header-font-color);
   font-weight: bold;
   font-size: 1.5rem;
   transition: 0.6s ease;
-  /* border-radius: 0 3px 3px 0; */
-  /*  border: thin solid greenyellow; */
-  /*  user-select: none; */
   text-decoration: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 10px 0 0 10px;
 }
 
 .prev {
   left: 0;
   border-radius: 0 10px 10px 0;
 }
+.next {
+  right: 0;
+  border-radius: 10px 0 0 10px;
+}
 
-/* On hover, add a black background color with a little bit see-through */
 .prev:hover,
 .next:hover {
-  /*background-color: rgba(0, 0, 0, 0.8);*/
   background-color: var(--modal-bg-color);
+}
+
+/********************************  MOTION  ********************************/
+@keyframes rebounce {
+  from,
+  20%,
+  53%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transform: translate3d(0, 0, 0);
+  }
+  40%,
+  43% {
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    transform: translate3d(0, -30px, 0) scaleY(1.1);
+  }
+  70% {
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    transform: translate3d(0, -15px, 0) scaleY(1.05);
+  }
+  80% {
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transform: translate3d(0, 0, 0) scaleY(0.95);
+  }
+  90% {
+    transform: translate3d(0, -4px, 0) scaleY(1.02);
+  }
+}
+
+.animate-1 {
+  animation-delay: 1s;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-iteration-count: 2;
+  animation-name: rebounce;
+  transform-origin: center bottom;
+}
+
+@keyframes leftToCenter {
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    transform: translate3d(-3000px, 0, 0) scaleX(3);
+  }
+  60% {
+    opacity: 1;
+    transform: translate3d(25px, 0, 0) scaleX(1);
+  }
+  75% {
+    transform: translate3d(-10px, 0, 0) scaleX(0.98);
+  }
+  90% {
+    transform: translate3d(5px, 0, 0) scaleX(0.995);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animate-2 {
+  animation-delay: 2.5s;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-iteration-count: 1;
+  animation-name: leftToCenter;
 }
 
 /********************************  RESPONSIVE  ********************************/
@@ -510,7 +534,6 @@ legend {
   .hambur-btn {
     visibility: hidden;
   }
-  /**/
   .header {
     display: flex;
     flex-direction: row;
@@ -534,22 +557,18 @@ legend {
     flex-flow: row wrap;
     align-items: center;
   }
-
   .menu a {
     padding: 1rem 1.5rem;
     font-size: 1rem;
     display: block;
-    /*    border-radius: 0.5rem; */
     transition: background-color 0.3s ease, color 0.3s ease,
       font-weight 0.3s ease;
-    /* border: thin solid #fff; */
   }
-
   .menu a:hover {
     background-color: transparent;
   }
 
-  /****/
+  /** flex **/
   .flex-container {
     flex-direction: row;
     margin-top: 2rem;
@@ -588,3 +607,5 @@ legend {
   }
 }
  */
+
+/* */
