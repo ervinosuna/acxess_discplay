@@ -1,32 +1,7 @@
 const w = window;
 const d = document;
 
-let mqResponsive = w.matchMedia("(max-width: 600px)");
-
-/* console.log(mqResponsive.matches); */
-
-const changeScreen = (mql) => {
-  console.log(mql);
-  if (mql.matches) {
-    d.getElementById(
-      "video"
-    ).innerHTML = `<a href="https://www.youtube.com/embed/oKazGrAVpvc" target="_blank" rel="noopener">Ver video 1</a>`;
-    console.log("solo link");
-  } else {
-    console.log("Video");
-    d.getElementById(
-      "video"
-    ).innerHTML = `<iframe width="560" height="315" src="https://www.youtube.com/embed/oKazGrAVpvc" title="Prueba de sonido e"
-      frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen>
-    </iframe>`;
-  }
-};
-
-mqResponsive.addEventListener("change", changeScreen);
-changeScreen(mqResponsive);
-
-// true es menor  false es mayor  https://developer.mozilla.org/en-US/docs/Web/API/MediaQueryList
+// true is less  false is greater  https://developer.mozilla.org/en-US/docs/Web/API/MediaQueryList
 function slider() {
   const $Next = d.querySelector(".next"),
     $Prev = d.querySelector(".prev"),
@@ -55,3 +30,29 @@ function slider() {
   });
 }
 slider();
+
+/*** This is an attempt to responsive response, when the Min is 600px the page would present a link to the video at Youtube  */
+/*
+let mqResponsive = w.matchMedia("(max-width: 600px)");
+// console.log(mqResponsive.matches);
+
+const changeScreen = (mql) => {
+  console.log(mql);
+  if (mql.matches) {
+    d.getElementById(
+      "video"
+    ).innerHTML = `<a href="https://www.youtube.com/embed/oKazGrAVpvc" target="_blank" rel="noopener">Ver video 1</a>`;
+    console.log("solo link");
+  } else {
+    console.log("Video");
+    d.getElementById(
+      "video"
+    ).innerHTML = `<iframe width="560" height="315" src="https://www.youtube.com/embed/oKazGrAVpvc" title="Prueba de sonido e"
+      frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>`;
+  }
+};
+
+mqResponsive.addEventListener("change", changeScreen);
+changeScreen(mqResponsive);*/

@@ -131,7 +131,6 @@ main {
 
 /********************************  CONTENT  ********************************/
 /*****************  INDEX  *****************/
-
 .invisible-logo {
   opacity: 0;
   transform: scale(0);
@@ -144,6 +143,20 @@ main {
 }
 
 /*****************  PICTURE GALLERY  *****************/
+.responsive-media {
+  position: relative;
+  max-width: 70%;
+  height: 0;
+  margin: 1rem auto 2rem;
+  padding-bottom: 56.25%;
+  /*   border: thin solid greenyellow; */
+}
+
+.responsive-media > * {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
 
 /*****************  ABOUT US  *****************/
 .flex-container {
@@ -327,7 +340,6 @@ legend {
 }
 
 /**********  Hamburger Button  **********/
-
 .hambur-btn {
   position: fixed;
   z-index: 1000;
@@ -373,6 +385,8 @@ legend {
   width: 100%;
   display: block;
   text-decoration: none;
+  /*   font-size: 1.25rem;
+  font-size: 2rem; */
   color: var(--header-font-color);
   transition: background-color 0.3s ease, color 0.3s ease, font-weight 0.3s ease;
 }
@@ -389,7 +403,7 @@ legend {
 /***************  Slider  ******************/
 .slides-container {
   position: relative;
-  width: 50%;
+  width: 70%;
   margin: 1rem auto;
   text-align: center;
   background: radial-gradient(#e74c3c, #000000);
@@ -397,8 +411,11 @@ legend {
 
 .slider {
   position: relative;
-  height: 500px; /*Original - esta bien*/
-  /* height: 80vh; */
+  max-width: 100%;
+  height: 0;
+  margin: 1rem auto 2rem;
+  padding-bottom: 56.25%;
+
   border: thick solid var(--header-font-color);
 }
 
@@ -528,7 +545,10 @@ legend {
 @media screen and (min-width: 576px) {
   .title {
     font-size: 1.5rem;
-    font-weight: 900;
+    /*     border: thin solid greenyellow; */
+  }
+  .menu a {
+    font-size: 2rem;
   }
 }
 
@@ -536,7 +556,7 @@ legend {
 @media screen and (min-width: 992px) {
   .title {
     font-size: 3rem;
-    font-weight: 900;
+    /*     border: thin solid magenta; */
   }
   .hambur-btn {
     visibility: hidden;
@@ -566,7 +586,7 @@ legend {
   }
   .menu a {
     padding: 1rem 1.5rem;
-    /* font-size: 1.25rem; */
+    font-size: 1.25rem;
     display: block;
     transition: background-color 0.3s ease, color 0.3s ease,
       font-weight 0.3s ease;
@@ -574,15 +594,12 @@ legend {
   .menu a:hover {
     background-color: transparent;
   }
-
-  /** flex **/
   .flex-container {
     flex-direction: row;
     margin-top: 2rem;
   }
   .flex-item {
     flex: 0 0 50%;
-    /* border: thin solid blue; */
   }
   .flex-row-reverse {
     flex-direction: row-reverse;
@@ -590,29 +607,35 @@ legend {
 
   .contact-form input[type="submit"] {
     width: 20%;
-    /* border: thin solid blue; */
   }
 }
 
-/* @media (min-width: 1200px) {
+@media screen and (min-width: 1400px) {
+  body {
+    font-size: 1.75rem;
+  }
   .header {
     height: 5.5rem;
-
   }
   .title {
     font-size: 2.5rem;
   }
+  .menu a {
+    font-size: 2rem;
+  }
+  .copyright {
+    font-size: 1rem;
+  }
 }
 
-@media (min-width: 1400px) {
+/* for a future */
+/*
+@media screen and (min-width: 1400px) {
   .header {
     height: 5.5rem;
-
   }
   .title {
-    font-size: 3rem;
+    font-size: 3.5rem;
+    border: thin solid yellow;
   }
-}
- */
-
-/* */
+} */
