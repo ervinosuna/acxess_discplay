@@ -52,23 +52,17 @@ function formValidation() {
         default:
           pattern = "^.{1,10}$";
       }
-      console.log("el pattern es: ", pattern);
       if (pattern && $input.value !== "") {
         let regex = new RegExp(pattern);
-        console.log(`Este es el valor: ${regex.exec($input.value)}`);
-        console.log(!regex.exec($input.value));
         if (!regex.exec($input.value)) {
           d.getElementById($input.id).classList.add("is-invalid");
           d.getElementById($input.id).classList.remove("is-valid");
-          console.log("añade invalid");
         } else {
           d.getElementById($input.id).classList.remove("is-invalid");
           d.getElementById($input.id).classList.add("is-valid");
-          console.log("añade valid");
         }
       } else {
         if (e.target.value === "") {
-          console.log("esta en blanco");
           d.getElementById($input.id).classList.remove("is-invalid");
           d.getElementById($input.id).classList.remove("is-valid");
         }
